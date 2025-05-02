@@ -2,11 +2,37 @@
 
 My portfolio website simulating macOS's GUI: https://macos.dawidolko.pl
 
+```
+.
+├── .github/
+├── .husky/
+├── assets/
+├── img/
+├── logo/
+├── markdown/
+├── music/
+├── public/
+├── screenshots/
+├── src/
+├── .editorconfig
+├── .eslintrc
+├── .gitattributes
+├── .gitignore
+├── .nojekyll
+├── CNAME
+├── LICENSE
+├── README.md
+├── index.html
+└── manifest.json
+```
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=dawidolko/Macos-Simulaing-System-GUI&type=Date)](https://star-history.com/#dawidolko/Macos-Simulaing-System-GUI&Date)
+
 Powered by [React](https://reactjs.org/) + [Zustand](https://zustand-demo.pmnd.rs/) + [UnoCSS](https://uno.antfu.me/) + [TypeScript](https://www.typescriptlang.org/) + [Vite](https://vitejs.dev/).
 
 ![light mode](./public/screenshots/light.png)
 ![dark mode](./public/screenshots/dark.png)
-
 
 &nbsp;
 
@@ -30,7 +56,6 @@ Build for production with minification to the `dist` folder:
 pnpm build
 ```
 
-
 &nbsp;
 
 ## Changelog
@@ -43,18 +68,16 @@ pnpm build
 
 - **Update 2021.12.05**: Refactored for cleaner code by utilizing functional components and hooks. Refer to [this branch](https://github.com/Renovamen/playground-macos/tree/class-component) for the previous version implemented with class components.
 
-
 &nbsp;
 
 ## Credits
 
 - macOS
-  - [Monterey](https://www.apple.com/macos/monterey/)
-  - [Catalina](https://www.apple.com/bw/macos/catalina/)
+- [Monterey](https://www.apple.com/macos/monterey/)
+- [Catalina](https://www.apple.com/bw/macos/catalina/)
 - [macOS Icon Gallery](https://www.macosicongallery.com/)
 - [sindresorhus/file-icon-cli](https://github.com/sindresorhus/file-icon-cli)
 - [vivek9patel.github.io](https://github.com/dawidolko/Simulaing-Ubuntu-System-GUI)
-
 
 &nbsp;
 
