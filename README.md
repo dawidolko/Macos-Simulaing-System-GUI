@@ -5,7 +5,7 @@ _A TypeScript + React playground that recreates the macOS desktop right inside y
 [![Website Status](https://img.shields.io/website?down_color=red&down_message=offline&up_message=online&url=https%3A%2F%2Fmacos.dawidolko.pl)](https://macos.dawidolko.pl)
 [![Stars](https://img.shields.io/github/stars/dawidolko/Macos-Simulaing-System-GUI?style=social)](https://github.com/dawidolko/Macos-Simulaing-System-GUI/stargazers)
 
-> **Live Demo:** <https://macos.dawidolko.pl>  
+> **Live Demo:** <https://macos.dawidolko.pl>
 
 ---
 
