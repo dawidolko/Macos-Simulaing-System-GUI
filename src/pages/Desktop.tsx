@@ -98,12 +98,10 @@ export default function Desktop(props: MacActions) {
     const rect = r.getBoundingClientRect();
     r.style.setProperty(
       "--window-transform-x",
-      // "+ window.innerWidth" because of the boundary for windows
       (window.innerWidth + rect.x).toFixed(1).toString() + "px"
     );
     r.style.setProperty(
       "--window-transform-y",
-      // "- minMarginY" because of the boundary for windows
       (rect.y - minMarginY).toFixed(1).toString() + "px"
     );
   };
@@ -132,21 +130,16 @@ export default function Desktop(props: MacActions) {
   const minimizeApp = (id: string): void => {
     setWindowPosition(id);
 
-    // get the corrosponding dock icon's position
     let r = document.querySelector(`#dock-${id}`) as HTMLElement;
     const dockAppRect = r.getBoundingClientRect();
 
     r = document.querySelector(`#window-${id}`) as HTMLElement;
-    // const appRect = r.getBoundingClientRect();
     const posY = window.innerHeight - r.offsetHeight / 2 - minMarginY;
-    // "+ window.innerWidth" because of the boundary for windows
     const posX = window.innerWidth + dockAppRect.x - r.offsetWidth / 2 + 25;
 
-    // translate the window to that position
     r.style.transform = `translate(${posX}px, ${posY}px) scale(0.2)`;
     r.style.transition = "ease-out 0.3s";
 
-    // add it to the minimized app list
     setAppMin(id, true);
   };
 
@@ -162,16 +155,13 @@ export default function Desktop(props: MacActions) {
   };
 
   const openApp = (id: string): void => {
-    // add it to the shown app list
     const showApps = state.showApps;
     showApps[id] = true;
 
-    // move to the top (use a maximum z-index)
     const appsZ = state.appsZ;
     const maxZ = state.maxZ + 1;
     appsZ[id] = maxZ;
 
-    // get the title of the currently opened app
     const currentApp = apps.find((app) => {
       return app.id === id;
     });
@@ -188,15 +178,12 @@ export default function Desktop(props: MacActions) {
     });
 
     const minApps = state.minApps;
-    // if the app has already been shown but minimized
     if (minApps[id]) {
-      // move to window's last position
       const r = document.querySelector(`#window-${id}`) as HTMLElement;
       r.style.transform = `translate(${r.style.getPropertyValue(
         "--window-transform-x"
       )}, ${r.style.getPropertyValue("--window-transform-y")}) scale(1)`;
       r.style.transition = "ease-in 0.3s";
-      // remove it from the minimized app list
       minApps[id] = false;
       setState({ ...state, minApps });
     }
@@ -243,7 +230,6 @@ export default function Desktop(props: MacActions) {
         filter: `brightness( ${(brightness as number) * 0.7 + 50}% )`
       }}
     >
-      {/* Top Menu Bar */}
       <TopBar
         title={state.currentTitle}
         setLogin={props.setLogin}
@@ -255,12 +241,10 @@ export default function Desktop(props: MacActions) {
         setSpotlightBtnRef={setSpotlightBtnRef}
       />
 
-      {/* Desktop Apps */}
       <div className="window-bound z-10 absolute" style={{ top: minMarginY }}>
         {renderAppWindows()}
       </div>
 
-      {/* Spotlight */}
       {state.spotlight && (
         <Spotlight
           openApp={openApp}
@@ -270,10 +254,8 @@ export default function Desktop(props: MacActions) {
         />
       )}
 
-      {/* Launchpad */}
       <Launchpad show={state.showLaunchpad} toggleLaunchpad={toggleLaunchpad} />
 
-      {/* Dock */}
       <Dock
         open={openApp}
         showApps={state.showApps}

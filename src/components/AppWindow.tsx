@@ -113,9 +113,7 @@ const Window = (props: WindowProps) => {
   const [state, setState] = useState<WindowState>({
     width: initWidth,
     height: initHeight,
-    // "+ winWidth" because of the boundary for windows
     x: winWidth + (winWidth - initWidth) / 2 + (props.x || 0),
-    // "- minMarginY" because of the boundary for windows
     y: (winHeight - initHeight - dockSize - minMarginY) / 2 + (props.y || 0)
   });
 
@@ -149,20 +147,17 @@ const Window = (props: WindowProps) => {
       }}
       position={{
         x: props.max
-          ? winWidth // because of boundary
+          ? winWidth
           : Math.min(
-              // "winWidth * 2" because of the boundary for windows
               winWidth * 2 - minMarginX,
               Math.max(
-                // "+ winWidth" because we add a boundary for windows
                 winWidth - state.width + minMarginX,
                 state.x
               )
             ),
         y: props.max
-          ? -minMarginY // because of boundary
+          ? -minMarginY
           : Math.min(
-              // "- minMarginY" because of the boundary for windows
               winHeight - minMarginY - (dockSize + 15 + minMarginY),
               Math.max(0, state.y)
             )

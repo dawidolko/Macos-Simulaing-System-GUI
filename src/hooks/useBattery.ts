@@ -1,4 +1,3 @@
-// Borrowed from: https://github.com/streamich/react-use/blob/master/src/useBattery.ts
 export interface BatteryState {
   charging: boolean;
   chargingTime: number;

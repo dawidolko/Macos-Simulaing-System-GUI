@@ -8,8 +8,6 @@ import {
   type MotionValue
 } from "framer-motion";
 
-// Hover effect is adopted from https://github.com/PuruVJ/macos-web/blob/main/src/components/dock/DockItem.tsx
-
 const useDockHoverAnimation = (
   mouseX: MotionValue,
   ref: React.RefObject<HTMLImageElement>,
@@ -51,8 +49,6 @@ const useDockHoverAnimation = (
     if (el && mouseXVal !== null) {
       const rect = el.getBoundingClientRect();
       const imgCenterX = rect.left + rect.width / 2;
-      // difference between the x coordinate value of the mouse pointer
-      // and the img center x coordinate value
       const distanceDelta = mouseXVal - imgCenterX;
       distance.set(distanceDelta);
       return;

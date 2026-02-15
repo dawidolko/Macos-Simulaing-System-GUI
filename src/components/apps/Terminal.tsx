@@ -14,7 +14,6 @@ interface TerminalState {
   content: JSX.Element[];
 }
 
-// rain animation is adopted from: https://codepen.io/P3R0/pen/MwgoKv
 const HowDare = ({ setRMRF }: { setRMRF: (value: boolean) => void }) => {
   const FONT_SIZE = 12;
 
@@ -57,10 +56,8 @@ const HowDare = ({ setRMRF }: { setRMRF: (value: boolean) => void }) => {
 
     setDrops(
       drops.map((y) => {
-        // sends the drop back to the top randomly after it has crossed the screen
-        // adding randomness to the reset to make the drops scattered on the Y axis
         if (y * FONT_SIZE > canvas.height && Math.random() > 0.975) return 1;
-        // increments Y coordinate
+
         else return y + 1;
       })
     );
@@ -142,22 +139,17 @@ export default class Terminal extends React.Component<{}, TerminalState> {
     return children;
   };
 
-  // move into a specified folder
   cd = (args?: string) => {
     if (args === undefined || args === "~") {
-      // move to root
       this.curDirPath = [];
       this.curChildren = terminal;
     } else if (args === ".") {
-      // stay in the current folder
       return;
     } else if (args === "..") {
-      // move to parent folder
       if (this.curDirPath.length === 0) return;
       this.curDirPath.pop();
       this.curChildren = this.getCurChildren();
     } else {
-      // move to certain child folder
       const target = this.curChildren.find((item: TerminalData) => {
         return item.title === args && item.type === "folder";
       });
@@ -173,7 +165,6 @@ export default class Terminal extends React.Component<{}, TerminalState> {
     }
   };
 
-  // display content of a specified folder
   ls = () => {
     const result = [];
     for (const item of this.curChildren) {
@@ -192,7 +183,6 @@ export default class Terminal extends React.Component<{}, TerminalState> {
     );
   };
 
-  // display content of a specified file
   cat = (args?: string) => {
     const file = this.curChildren.find((item: TerminalData) => {
       return item.title === args && item.type === "file";
@@ -208,7 +198,6 @@ export default class Terminal extends React.Component<{}, TerminalState> {
     }
   };
 
-  // clear terminal
   clear = () => {
     this.curInputTimes += 1;
     this.reset();
@@ -282,13 +271,11 @@ export default class Terminal extends React.Component<{}, TerminalState> {
     const input = inputText.split(" ");
 
     if (keyCode === "Enter") {
-      // ----------- run command -----------
       this.history.push(inputText);
 
       const cmd = input[0];
       const args = input[1];
 
-      // we can't edit the past input
       inputElement.setAttribute("readonly", "true");
 
       if (inputText.substring(0, 6) === "rm -rf") this.setState({ rmrf: true });
@@ -301,21 +288,17 @@ export default class Terminal extends React.Component<{}, TerminalState> {
         );
       }
 
-      // point to the last history command
       this.curHistory = this.history.length;
 
-      // generate new input row
       this.curInputTimes += 1;
       this.generateInputRow(this.curInputTimes);
     } else if (keyCode === "ArrowUp") {
-      // ----------- previous history command -----------
       if (this.history.length > 0) {
         if (this.curHistory > 0) this.curHistory--;
         const historyCommand = this.history[this.curHistory];
         inputElement.value = historyCommand;
       }
     } else if (keyCode === "ArrowDown") {
-      // ----------- next history command -----------
       if (this.history.length > 0) {
         if (this.curHistory < this.history.length) this.curHistory++;
         if (this.curHistory === this.history.length) inputElement.value = "";
@@ -325,9 +308,7 @@ export default class Terminal extends React.Component<{}, TerminalState> {
         }
       }
     } else if (keyCode === "Tab") {
-      // ----------- auto complete -----------
       inputElement.value = this.autoComplete(inputText);
-      // prevent tab outside the terminal
       e.preventDefault();
     }
   };

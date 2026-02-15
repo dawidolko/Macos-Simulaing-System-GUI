@@ -18,10 +18,8 @@ export default function Login(props: MacActions) {
 
   const loginHandle = () => {
     if (user.password === "" || user.password === password) {
-      // not set password or password correct
       props.setLogin(true);
     } else if (password !== "") {
-      // password not null and incorrect
       setSign("Incorrect password");
     }
   };
@@ -37,11 +35,9 @@ export default function Login(props: MacActions) {
       onClick={() => loginHandle()}
     >
       <div className="inline-block w-auto relative top-1/2 -mt-40">
-        {/* Avatar */}
         <img className="rounded-full size-24 my-0 mx-auto" src={user.avatar} alt="img" />
         <div className="font-semibold mt-2 text-xl text-white">{user.name}</div>
 
-        {/* Password Input */}
         <div className="mx-auto grid grid-cols-5 w-44 h-8 mt-4 rounded-md backdrop-blur-2xl bg-gray-300/50">
           <input
             className="text-sm text-white col-start-1 col-span-4 no-outline bg-transparent px-2"
@@ -62,7 +58,6 @@ export default function Login(props: MacActions) {
         </div>
       </div>
 
-      {/* buttons */}
       <div className="text-sm fixed bottom-16 inset-x-0 mx-auto flex flex-row space-x-4 w-max">
         <div
           className="hstack flex-col text-white w-24 cursor-pointer"

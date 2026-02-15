@@ -79,13 +79,10 @@ const NavPage = ({ width, setGoURL }: NavProps) => {
       }}
     >
       <div className="w-full min-h-full pt-8 bg-c-100/80 backdrop-blur-2xl">
-        {/* Favorites */}
         <NavSection section={websites.favorites} setGoURL={setGoURL} width={width} />
 
-        {/* Frequently Visited */}
         <NavSection section={websites.freq} setGoURL={setGoURL} width={width} />
 
-        {/* Privacy Report */}
         <div className="mx-auto w-full max-w-screen-md" p="t-8 x-4 b-16">
           <div font="medium" text="xl sm:2xl">
             Privacy Report
@@ -165,7 +162,6 @@ const Safari = ({ width }: SafariProps) => {
 
   return (
     <div className="w-full h-full">
-      {/* browser topbar */}
       <div className={`h-10 grid ${grid} items-center bg-c-white`}>
         <div className="flex px-2">
           <button
@@ -205,7 +201,6 @@ const Safari = ({ width }: SafariProps) => {
         </div>
       </div>
 
-      {/* browser content */}
       {wifi ? (
         state.goURL === "" ? (
           <NavPage setGoURL={setGoURL} width={width as number} />

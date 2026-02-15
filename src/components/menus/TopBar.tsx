@@ -76,7 +76,6 @@ const TopBar = (props: TopBarProps) => {
     showAppleMenu: false
   });
 
-  /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
   const [audio, audioState, controls, audioRef] = useAudio({
     src: music.audio,
     autoReplay: true
@@ -185,7 +184,6 @@ const TopBar = (props: TopBarProps) => {
         </TopBarItem>
       </div>
 
-      {/* Open this when clicking on Apple logo */}
       {state.showAppleMenu && (
         <AppleMenu
           logout={logout}
@@ -224,12 +222,10 @@ const TopBar = (props: TopBarProps) => {
           <CCMIcon size={16} />
         </TopBarItem>
 
-        {/* Open this when clicking on Wifi button */}
         {state.showWifiMenu && (
           <WifiMenu toggleWifiMenu={toggleWifiMenu} btnRef={wifiBtnRef} />
         )}
 
-        {/* Open this when clicking on Control Center button */}
         {state.showControlCenter && (
           <ControlCenterMenu
             playing={audioState.playing}
