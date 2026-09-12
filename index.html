@@ -9,17 +9,23 @@
     <link rel="icon" href="/logo/macOs.png" />
     <link rel="apple-touch-icon" href="/logo/macOs.png" />
     <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+      manifest.json provides metadata used when the app is installed on a
+      device. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="/manifest.json" />
 
     <title>Dawid Olko's Portfolio</title>
-    <script type="module" crossorigin src="/assets/index-CTBUGuFG.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DU69ae56.css" />
   </head>
   <body>
     <div id="root"></div>
+
+    <!--
+      The Vite entry point. This file is the build *template*, not a build
+      output: pointing it at a compiled bundle instead — which is how it stood
+      until now — makes `vite build` copy the old bundle forward and never
+      compile src/ again, so source changes stop reaching the published site.
+    -->
+    <script type="module" src="/src/index.tsx"></script>
 
     <script
       async

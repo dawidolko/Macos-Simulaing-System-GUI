@@ -3,3 +3,8 @@
 .cache/
 node_modules/
 dist/
+
+# Build output. The root index.html is the Vite *template*; a compiled bundle
+# committed here is what stopped `vite build` from ever compiling src/ again.
+/assets
+/dist
