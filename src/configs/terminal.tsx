@@ -13,8 +13,9 @@ const terminal: TerminalData[] = [
         content: (
           <div className="py-1">
             <div>
-              Hi, this is Xiaohan Zou. I am a PhD student at the Computer Science and
-              Engineering department of Pennsylvania State University.
+              Hi, this is Dawid Olko. I am a computer science graduate from the
+              University of Rzeszów, building web applications and recommender
+              systems.
             </div>
           </div>
         )
@@ -23,14 +24,14 @@ const terminal: TerminalData[] = [
         id: "about-interests",
         title: "interests.txt",
         type: "file",
-        content: "Machine Learning / Computer Vision / Multimodal Learning"
+        content: "Web development / Recommender systems / Accessibility / Databases"
       },
       {
         id: "about-who-cares",
         title: "who-cares.txt",
         type: "file",
         content:
-          "I'm looking for a research internship for Summer 2024. I'm open to collaboration on research projects."
+          "Open to interesting projects and collaboration. Most of my work is public on GitHub."
       },
       {
         id: "about-contact",
@@ -42,65 +43,55 @@ const terminal: TerminalData[] = [
               Email:{" "}
               <a
                 className="text-blue-300"
-                href="mailto:renovamenzxh@gmail.com"
+                href="mailto:kontakt@dawidolko.pl"
                 target="_blank"
                 rel="noreferrer"
               >
-                renovamenzxh@gmail.com
+                kontakt@dawidolko.pl
               </a>
             </li>
             <li>
               Github:{" "}
               <a
                 className="text-blue-300"
-                href="https://github.com/Renovamen"
+                href="https://github.com/dawidolko"
                 target="_blank"
                 rel="noreferrer"
               >
-                @Renovamen
-              </a>
-            </li>
-            <li>
-              <a
-                className="text-blue-300"
-                href="https://scholar.google.com/citations?user=RuW6xgMAAAAJ"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Google Scholar
+                @dawidolko
               </a>
             </li>
             <li>
               Linkedin:{" "}
               <a
                 className="text-blue-300"
-                href="https://www.linkedin.com/in/xiaohan-zou"
+                href="https://www.linkedin.com/in/dawidolko"
                 target="_blank"
                 rel="noreferrer"
               >
-                xiaohan-zou
+                dawidolko
               </a>
             </li>
             <li>
               Personal Website:{" "}
               <a
                 className="text-blue-300"
-                href="https://zxh.io"
+                href="https://dawidolko.pl"
                 target="_blank"
                 rel="noreferrer"
               >
-                https://zxh.io
+                https://dawidolko.pl
               </a>
             </li>
             <li>
-              知乎:{" "}
+              CV:{" "}
               <a
                 className="text-blue-300"
-                href="https://www.zhihu.com/people/chao-neng-gui-su"
+                href="https://cv.dawidolko.pl"
                 target="_blank"
                 rel="noreferrer"
               >
-                @西伯利亚大恶龙
+                https://cv.dawidolko.pl
               </a>
             </li>
           </ul>

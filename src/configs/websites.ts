@@ -5,47 +5,35 @@ const websites: WebsitesData = {
     title: "SNS Links",
     sites: [
       {
-        id: "my-blog",
+        id: "my-website",
         title: "Website",
-        img: "https://zxh.io/img/avatar.jpg",
-        link: "https://zxh.io/",
+        img: "img/ui/avatar.jpg",
+        link: "https://dawidolko.pl/",
         inner: true
       },
       {
         id: "my-github",
         title: "Github",
         img: "img/sites/github.svg",
-        link: "https://github.com/Renovamen"
+        link: "https://github.com/dawidolko"
       },
       {
         id: "my-linkedin",
         title: "Linkedin",
         img: "img/sites/linkedin.svg",
-        link: "https://www.linkedin.com/in/xiaohan-zou"
+        link: "https://www.linkedin.com/in/dawidolko"
       },
       {
-        id: "my-google-scholar",
-        title: "Scholar",
-        img: "img/sites/google-scholar.svg",
-        link: "https://scholar.google.com/citations?user=RuW6xgMAAAAJ"
-      },
-      {
-        id: "my-zhihu",
-        title: "知乎",
-        img: "img/sites/zhihu.jpeg",
-        link: "https://www.zhihu.com/people/chao-neng-gui-su"
-      },
-      {
-        id: "my-twitter",
-        title: "Twitter",
-        img: "img/sites/twitter.svg",
-        link: "https://www.twitter.com/renovamen_zxh"
+        id: "my-cv",
+        title: "CV",
+        img: "img/sites/github.svg",
+        link: "https://cv.dawidolko.pl/"
       },
       {
         id: "my-email",
         title: "Email",
         img: "img/sites/gmail.svg",
-        link: "mailto:renovamenzxh@gmail.com"
+        link: "mailto:kontakt@dawidolko.pl"
       }
     ]
   },
@@ -87,18 +75,6 @@ const websites: WebsitesData = {
         title: "ArtStation",
         img: "img/sites/artstation.svg",
         link: "https://www.artstation.com//"
-      },
-      {
-        id: "bilibili",
-        title: "Bilibili",
-        img: "img/sites/bilibili.svg",
-        link: "https://www.bilibili.com/"
-      },
-      {
-        id: "zhihu",
-        title: "知乎",
-        img: "img/sites/zhihu.jpeg",
-        link: "https://www.zhihu.com/"
       },
       {
         id: "leetcode",

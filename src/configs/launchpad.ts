@@ -1,59 +1,61 @@
 import type { LaunchpadData } from "~/types";
 
+/*
+ * The launchpad opens my own projects.
+ *
+ * Icons are loaded from each site's own favicon rather than copied in: they
+ * then follow the project when its branding changes, and there is no second
+ * copy here to go stale. The two entries without a favicon of their own reuse
+ * the neutral icons that ship with the desktop.
+ */
 const launchpadApps: LaunchpadData[] = [
   {
-    id: "flint",
-    title: "Flint",
-    img: "img/icons/launchpad/flint.png",
-    link: "https://github.com/Renovamen/flint"
+    id: "portfolio",
+    title: "dawidolko.pl",
+    img: "https://dawidolko.pl/src/assets/img/favicon.ico",
+    link: "https://dawidolko.pl/"
   },
   {
-    id: "oh-my-cv",
-    title: "Oh, My CV!",
-    img: "https://ohmycv.app/pwa-512x512.png",
-    link: "https://ohmycv.app"
+    id: "cv",
+    title: "My CV",
+    img: "https://cv.dawidolko.pl/assets/favicon.svg",
+    link: "https://cv.dawidolko.pl/"
   },
   {
-    id: "oh-vue-icons",
-    title: "Oh, Vue Icons!",
-    img: "img/icons/launchpad/oh-vue-icons.png",
-    link: "https://oh-vue-icons.js.org"
+    id: "reelcut",
+    title: "ReelCut",
+    img: "https://reelcut.dawidolko.pl/favicon.svg",
+    link: "https://reelcut.dawidolko.pl/"
   },
   {
-    id: "gungnir",
-    title: "Gungnir",
+    id: "cvforge",
+    title: "CVForge",
+    img: "https://cvforge.dawidolko.pl/favicon.svg",
+    link: "https://cvforge.dawidolko.pl/"
+  },
+  {
+    id: "techbyte",
+    title: "TechByte",
+    img: "https://techbyte.dawidolko.pl/favicon.ico",
+    link: "https://techbyte.dawidolko.pl/"
+  },
+  {
+    id: "templates",
+    title: "Website Templates",
     img: "img/icons/launchpad/gungnir.png",
-    link: "https://vuepress-theme-gungnir.vercel.app/"
+    link: "https://templateswebsite.dawidolko.pl/"
   },
   {
-    id: "what-if",
-    title: "My Notebook",
-    img: "img/icons/launchpad/notebook.png",
-    link: "https://note.zxh.io"
+    id: "achievements",
+    title: "GitHub Badges",
+    img: "img/icons/launchpad/meta.png",
+    link: "https://achievements.dawidolko.pl/"
   },
   {
-    id: "cube",
-    title: "Cube Solver",
-    img: "img/icons/launchpad/cube.png",
-    link: "https://cube.zxh.io/"
-  },
-  {
-    id: "resume",
-    title: "Résumé",
-    img: "img/icons/launchpad/resume.png",
-    link: "https://resume.zxh.io/"
-  },
-  {
-    id: "zelda",
-    title: "Webpage for Zelda",
-    img: "img/icons/launchpad/zelda.png",
-    link: "https://zelda.zxh.io/"
-  },
-  {
-    id: "fishmail",
-    title: "Fishmail",
-    img: "img/icons/launchpad/fishmail.png",
-    link: "https://fishmail.vercel.app/"
+    id: "github",
+    title: "GitHub",
+    img: "img/sites/github.svg",
+    link: "https://github.com/dawidolko"
   }
 ];
 
