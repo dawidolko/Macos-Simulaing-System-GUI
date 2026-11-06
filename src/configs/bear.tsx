@@ -11,7 +11,7 @@ const bear: BearData[] = [
         title: "About Me",
         file: "markdown/about-me.md",
         icon: "i-la:dragon",
-        excerpt: "Hey there! I'm a dragon lost in human world..."
+        excerpt: "Who I am, what I build and how to reach me..."
       },
       {
         id: "github-stats",
@@ -35,11 +35,11 @@ const bear: BearData[] = [
     icon: "i-octicon:repo",
     md: [
       {
-        id: "flint",
-        title: "Flint",
+        id: "github-profile",
+        title: "GitHub Profile",
         file: "https://raw.githubusercontent.com/dawidolko/dawidolko/main/README.md",
         icon: "i-heroicons-solid:fire",
-        excerpt: "A deep learning framework implemented in Numpy...",
+        excerpt: "My profile, projects and the tools I use...",
         link: "https://github.com/dawidolko/dawidolko"
       },
       {
@@ -49,7 +49,7 @@ const bear: BearData[] = [
         icon: "i-ri:gamepad-line",
         excerpt: "My portfolio website simulating macOS's GUI...",
         link: "https://github.com/dawidolko/Simulaing-Macos-System-GUI"
-      },
+      }
     ]
   }
 ];

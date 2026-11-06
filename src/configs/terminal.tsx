@@ -13,8 +13,10 @@ const terminal: TerminalData[] = [
         content: (
           <div className="py-1">
             <div>
-              Hi, this is Dawid Olko. I am a computer science graduate from the University
-              of Rzeszów, building web applications and recommender systems.
+              Hi, this is Dawid Olko, a Fullstack / AI Developer from Rzeszów, Poland. I
+              hold a BEng in Computer Science from the University of Rzeszów, and my MSc
+              is in progress. I build web applications end to end and tools for working
+              with AI coding agents, and I'm a co-creator of Skribly.
             </div>
           </div>
         )
@@ -23,14 +25,13 @@ const terminal: TerminalData[] = [
         id: "about-interests",
         title: "interests.txt",
         type: "file",
-        content: "Web development / Recommender systems / Accessibility / Databases"
+        content: "Web applications / AI coding agents / Accessibility / Databases"
       },
       {
         id: "about-who-cares",
         title: "who-cares.txt",
         type: "file",
-        content:
-          "Open to interesting projects and collaboration. Most of my work is public on GitHub."
+        content: "Most of my work is public on GitHub."
       },
       {
         id: "about-contact",
