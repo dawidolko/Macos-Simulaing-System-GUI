@@ -1,3 +1,7 @@
+<p align="center">
+  <a href="https://macos.dawidolko.pl/"><img src="docs/readme/banner.webp" alt="macOS Desktop Portfolio: interface experiment. The dock, the launchpad and the animations" width="100%"></a>
+</p>
+
 # macOS Desktop Portfolio
 
 > 🍏 **The dock, the launchpad and the animations** — macOS rebuilt in TypeScript and React, with a markdown editor running inside it
@@ -13,7 +17,7 @@ It is the most heavily typed of these four — TypeScript throughout, Zustand fo
 ![Milkdown](https://img.shields.io/badge/Milkdown-editor-6B4FBB)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-**Live:** [macos.dawidolko.pl](https://macos.dawidolko.pl)
+**[Live site](https://macos.dawidolko.pl/)** · [Screenshots](#️-screenshots) · [Getting started](#-getting-started)
 
 ---
 
@@ -25,6 +29,15 @@ It is the most heavily typed of these four — TypeScript throughout, Zustand fo
 - **Appearance follows the system** — light and dark switch with the OS preference rather than only by a toggle.
 - **TypeScript throughout** — the window model, the app registry and the stores are typed, which is what keeps a desktop of many small apps manageable.
 - **Linted and hooked** — ESLint with husky, so the checks run before a commit, not after.
+
+---
+
+## 🖼️ Screenshots
+
+<p align="center">
+  <img src="docs/readme/desktop.webp" alt="macOS Desktop Portfolio on a desktop screen" width="74%">
+  <img src="docs/readme/mobile.webp" alt="macOS Desktop Portfolio on a phone" width="22%">
+</p>
 
 ---
 
@@ -107,3 +120,11 @@ This is one of four desktop-simulator portfolios, each built on a different stac
 ## 📄 License
 
 MIT © [Dawid Olko](https://dawidolko.pl)
+
+---
+
+## 👨‍💻 Author
+
+**Dawid Olko** · Fullstack / AI Developer
+
+[Portfolio](https://olkodawid.dawidolko.pl) · [CV](https://cv.dawidolko.pl) · [LinkedIn](https://www.linkedin.com/in/dawidolko/) · [GitHub](https://github.com/dawidolko)
