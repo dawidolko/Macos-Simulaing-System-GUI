@@ -57,7 +57,6 @@ const HowDare = ({ setRMRF }: { setRMRF: (value: boolean) => void }) => {
     setDrops(
       drops.map((y) => {
         if (y * FONT_SIZE > canvas.height && Math.random() > 0.975) return 1;
-
         else return y + 1;
       })
     );
@@ -72,7 +71,7 @@ const HowDare = ({ setRMRF }: { setRMRF: (value: boolean) => void }) => {
       onClick={() => setRMRF(false)}
     >
       <canvas ref={canvasRef}></canvas>
-      <div className="font-avenir absolute h-28 text-center space-y-4 m-auto inset-0">
+      <div className="font-nunito absolute h-28 text-center space-y-4 m-auto inset-0">
         <div text-4xl>{emoji}</div>
         <div text-3xl>HOW DARE YOU!</div>
         <div>Click to go back</div>

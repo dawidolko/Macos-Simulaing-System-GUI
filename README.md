@@ -6,6 +6,8 @@
 
 > 🍏 **The dock, the launchpad and the animations** — macOS rebuilt in TypeScript and React, with a markdown editor running inside it
 
+**Based on [playground-macos](https://github.com/Renovamen/playground-macos) by Xiaohan Zou ([Renovamen](https://github.com/Renovamen)), MIT licence.** Not affiliated with Apple; this is an interface imitation for portfolio purposes.
+
 A macOS desktop in the browser: the dock with its magnification, launchpad, draggable windows, and an appearance that follows the system light/dark preference.
 
 It is the most heavily typed of these four — TypeScript throughout, Zustand for state, Framer Motion for the animations — and it carries a real application rather than a mock-up: Milkdown, a proper WYSIWYG markdown editor, runs in one of its windows.
@@ -125,7 +127,7 @@ An accessibility panel in the corner of every page changes text size, contrast, 
 
 ## 📄 License
 
-MIT © [Dawid Olko](https://dawidolko.pl)
+MIT. Copyright (c) 2021 Xiaohan Zou ([@Renovamen](https://github.com/Renovamen)) and Copyright (c) 2024 [Dawid Olko](https://dawidolko.pl), see [LICENSE](LICENSE). Fonts, images, music and icons keep their own terms, listed in [CREDITS.md](CREDITS.md).
 
 ---
 
