@@ -68,8 +68,16 @@ export default function App() {
 const rootElement = document.getElementById("root") as HTMLElement;
 const root = createRoot(rootElement);
 
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+/*
+  Waiting one frame lets the HTML in the first response paint before the application
+  replaces it. A tab opened in the background has no frames, so it mounts at once.
+*/
+const mount = () =>
+  root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+
+if (document.hidden) mount();
+else requestAnimationFrame(() => setTimeout(mount));

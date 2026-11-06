@@ -30,7 +30,7 @@
     <link rel="icon" href="/logo/favicon.png" />
     <link rel="apple-touch-icon" href="/logo/favicon.png" />
     <link rel="manifest" href="/manifest.json" />
-    <link rel="preload" as="image" href="/img/ui/avatar.jpg" />
+    <link rel="preload" as="image" href="/img/ui/avatar.jpg" fetchpriority="high" />
     <style>
       html,
       body,
@@ -90,7 +90,6 @@
       it at a compiled bundle makes `vite build` stop compiling src/.
     -->
     <script type="module" src="/src/index.tsx"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DSL4Z03NFE"></script>
     <script src="/analytics.js"></script>
   </body>
 </html>
