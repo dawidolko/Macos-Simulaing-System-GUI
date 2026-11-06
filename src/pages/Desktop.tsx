@@ -213,7 +213,7 @@ export default function Desktop(props: MacActions) {
 
         return (
           <AppWindow key={`desktop-app-${app.id}`} {...props}>
-            {app.content}
+            <React.Suspense fallback={null}>{app.content}</React.Suspense>
           </AppWindow>
         );
       } else {

@@ -68,7 +68,7 @@ export default function Launchpad({ show, toggleLaunchpad }: LaunchpadProps) {
                 className="w-14 sm:w-20 mx-auto"
                 href={app.link}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
               >
                 <img src={app.img} alt={app.title} title={app.title} />

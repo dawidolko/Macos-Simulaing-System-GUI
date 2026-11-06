@@ -13,9 +13,8 @@ const terminal: TerminalData[] = [
         content: (
           <div className="py-1">
             <div>
-              Hi, this is Dawid Olko. I am a computer science graduate from the
-              University of Rzeszów, building web applications and recommender
-              systems.
+              Hi, this is Dawid Olko. I am a computer science graduate from the University
+              of Rzeszów, building web applications and recommender systems.
             </div>
           </div>
         )
@@ -45,7 +44,7 @@ const terminal: TerminalData[] = [
                 className="text-blue-300"
                 href="mailto:kontakt@dawidolko.pl"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 kontakt@dawidolko.pl
               </a>
@@ -56,7 +55,7 @@ const terminal: TerminalData[] = [
                 className="text-blue-300"
                 href="https://github.com/dawidolko"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 @dawidolko
               </a>
@@ -67,7 +66,7 @@ const terminal: TerminalData[] = [
                 className="text-blue-300"
                 href="https://www.linkedin.com/in/dawidolko"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 dawidolko
               </a>
@@ -78,7 +77,7 @@ const terminal: TerminalData[] = [
                 className="text-blue-300"
                 href="https://dawidolko.pl"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 https://dawidolko.pl
               </a>
@@ -89,7 +88,7 @@ const terminal: TerminalData[] = [
                 className="text-blue-300"
                 href="https://cv.dawidolko.pl"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 https://cv.dawidolko.pl
               </a>

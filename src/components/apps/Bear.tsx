@@ -1,3 +1,4 @@
+import "katex/dist/katex.min.css";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
@@ -69,7 +70,7 @@ const Sidebar = ({ cur, setMidBar }: SidebarProps) => {
           <li
             key={`bear-sidebar-${item.id}`}
             className={`pl-6 h-8 hstack cursor-default ${
-              cur === index ? "bg-red-500" : "bg-transparent"
+              cur === index ? "bg-red-700" : "bg-transparent"
             } ${cur === index ? "" : "hover:bg-gray-600"}`}
             onClick={() => setMidBar(item.md, index)}
           >
@@ -106,7 +107,7 @@ const Middlebar = ({ items, cur, setContent }: MiddlebarProps) => {
                   pos="absolute top-1 right-4"
                   href={item.link}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   <span className="i-ant-design:link-outlined text-c-500" />
                 </a>

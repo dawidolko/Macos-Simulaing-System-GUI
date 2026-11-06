@@ -194,7 +194,7 @@ Please read our **[Contributing Guidelines](contributing/guidelines)** before su
 - [ ] **File System** - Virtual file system with drag & drop
 - [ ] **App Store** - In-app application installer
 - [ ] **Multi-language Support** - i18n implementation
-- [ ] **Accessibility** - WCAG 2.1 compliance
+- [ ] **Accessibility** - further keyboard and screen reader improvements
 
 ---
 

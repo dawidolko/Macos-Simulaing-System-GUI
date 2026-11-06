@@ -40,7 +40,10 @@ export default defineConfig({
     [colorReg("border-c"), (v) => colorAttr("border", v)],
     [colorReg("bg-c"), (v) => colorAttr("bg", v)],
     ["shadow-menu", "shadow-md shadow-black/25 dark:shadow-black/50"],
-    ["window-btn", "size-3 text-black rounded-full flex-center no-outline"],
+    [
+      "window-btn",
+      "size-6 p-1.5 bg-clip-content text-black rounded-full flex-center no-outline"
+    ],
     ["border-menu", "border-gray-500/50"],
     [
       "menu-box",

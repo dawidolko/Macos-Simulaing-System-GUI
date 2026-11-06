@@ -1,14 +1,14 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 
-import Desktop from "~/pages/Desktop";
 import Login from "~/pages/Login";
 import Boot from "~/pages/Boot";
 
 import "@unocss/reset/tailwind.css";
 import "uno.css";
-import "katex/dist/katex.min.css";
 import "~/styles/index.css";
+
+const Desktop = React.lazy(() => import("~/pages/Desktop"));
 
 export default function App() {
   const [login, setLogin] = useState<boolean>(false);
@@ -44,12 +44,14 @@ export default function App() {
     return <Boot restart={restart} sleep={sleep} setBooting={setBooting} />;
   } else if (login) {
     return (
-      <Desktop
-        setLogin={setLogin}
-        shutMac={shutMac}
-        sleepMac={sleepMac}
-        restartMac={restartMac}
-      />
+      <React.Suspense fallback={null}>
+        <Desktop
+          setLogin={setLogin}
+          shutMac={shutMac}
+          sleepMac={sleepMac}
+          restartMac={restartMac}
+        />
+      </React.Suspense>
     );
   } else {
     return (

@@ -73,9 +73,10 @@ const TrafficLights = ({ id, close, aspectRatio, max, setMax, setMin }: TrafficP
   };
 
   return (
-    <div className="traffic-lights flex flex-row absolute left-0 space-x-2 pl-2 mt-1.5">
+    <div className="traffic-lights flex flex-row absolute left-0">
       <button
         className="window-btn bg-red-500 dark:bg-red-400"
+        aria-label="Close window"
         onClick={closeWindow}
         onTouchEnd={closeWindow}
       >
@@ -83,6 +84,7 @@ const TrafficLights = ({ id, close, aspectRatio, max, setMax, setMin }: TrafficP
       </button>
       <button
         className={`window-btn ${max ? "bg-c-400" : "bg-yellow-500 dark:bg-yellow-400"}`}
+        aria-label="Minimize window"
         onClick={() => setMin(id)}
         onTouchEnd={() => setMin(id)}
         disabled={max}
@@ -93,6 +95,7 @@ const TrafficLights = ({ id, close, aspectRatio, max, setMax, setMin }: TrafficP
         className={`window-btn ${
           disableMax ? "bg-c-400" : "bg-green-500 dark:bg-green-400"
         }`}
+        aria-label="Maximize window"
         onClick={() => setMax(id)}
         onTouchEnd={() => setMax(id)}
         disabled={disableMax}
@@ -150,10 +153,7 @@ const Window = (props: WindowProps) => {
           ? winWidth
           : Math.min(
               winWidth * 2 - minMarginX,
-              Math.max(
-                winWidth - state.width + minMarginX,
-                state.x
-              )
+              Math.max(winWidth - state.width + minMarginX, state.x)
             ),
         y: props.max
           ? -minMarginY

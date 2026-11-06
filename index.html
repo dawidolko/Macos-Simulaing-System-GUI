@@ -1,43 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; media-src 'self' blob:; connect-src 'self' https:; frame-src https:; object-src 'none'; base-uri 'self'; form-action 'self'" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Dawid Olko's portfolio in macOS style." />
-
-    <link rel="icon" href="/logo/macOs.png" />
-    <link rel="apple-touch-icon" href="/logo/macOs.png" />
-    <!--
-      manifest.json provides metadata used when the app is installed on a
-      device. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="/manifest.json" />
-
+    <meta name="author" content="Dawid Olko" />
+    <title>macOS Desktop Simulator | Browser OS by Dawid Olko</title>
+    <meta name="description" content="A macOS desktop simulated in the browser with React and TypeScript: login screen, dock, draggable windows, menu bar and working demo applications." />
     <link rel="canonical" href="https://macos.dawidolko.pl/" />
-    <title>Dawid Olko's Portfolio</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="macOS Desktop Simulator" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://macos.dawidolko.pl/" />
+    <meta property="og:title" content="macOS Desktop Simulator | Browser OS by Dawid Olko" />
+    <meta property="og:description" content="A macOS desktop simulated in the browser with React and TypeScript: login screen, dock, draggable windows, menu bar and working demo applications." />
+    <meta property="og:image" content="https://macos.dawidolko.pl/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Simulated macOS desktop" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="macOS Desktop Simulator | Browser OS by Dawid Olko" />
+    <meta name="twitter:description" content="A macOS desktop simulated in the browser with React and TypeScript: login screen, dock, draggable windows, menu bar and working demo applications." />
+    <meta name="twitter:image" content="https://macos.dawidolko.pl/og-image.jpg" />
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "macOS Desktop Simulator", "url": "https://macos.dawidolko.pl/", "description": "A macOS desktop simulated in the browser with React and TypeScript: login screen, dock, draggable windows, menu bar and working demo applications.", "applicationCategory": "BrowserApplication", "operatingSystem": "Any web browser", "author": {"@type": "Person", "name": "Dawid Olko", "jobTitle": "Fullstack / AI Developer", "url": "https://dawidolko.pl"}}</script>
+    <link rel="icon" href="/logo/favicon.png" />
+    <link rel="apple-touch-icon" href="/logo/favicon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="preload" as="image" href="/img/ui/avatar.jpg" />
+    <style>
+      html,
+      body,
+      main,
+      #root {
+        height: 100%;
+        margin: 0;
+      }
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+      }
+      /* The login screen is painted here, so the first view does not wait for the bundle. */
+      .boot-screen {
+        box-sizing: border-box;
+        height: 100%;
+        padding-top: calc(50vh - 160px);
+        background: #1d1d1f;
+        color: #fff;
+        font: 600 20px / 28px system-ui, sans-serif;
+        text-align: center;
+      }
+      .boot-screen img {
+        display: block;
+        margin: 0 auto 8px;
+        border-radius: 50%;
+      }
+      /* On narrow screens the dock fills the width, so the panel sits above it. */
+      @media (max-width: 768px) {
+        body .a11yp {
+          bottom: 104px;
+        }
+        body .a11yp__panel {
+          max-height: calc(100vh - 180px);
+        }
+      }
+    </style>
+    <script src="/a11y/a11y-panel.js" data-accent="#0066cc" defer></script>
   </head>
   <body>
-    <div id="root"></div>
+    <main>
+      <h1 class="visually-hidden">macOS Desktop Simulator by Dawid Olko</h1>
+      <div id="root">
+        <div class="boot-screen">
+          <img src="/img/ui/avatar.jpg" alt="" width="96" height="96" />
+          Dawid Olko
+        </div>
+      </div>
+    </main>
 
     <!--
-      The Vite entry point. This file is the build *template*, not a build
-      output: pointing it at a compiled bundle instead — which is how it stood
-      until now — makes `vite build` copy the old bundle forward and never
-      compile src/ again, so source changes stop reaching the published site.
+      The Vite entry point. This file is the build template, not a build output: pointing
+      it at a compiled bundle makes `vite build` stop compiling src/.
     -->
     <script type="module" src="/src/index.tsx"></script>
-
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-DSL4Z03NFE"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-DSL4Z03NFE");
-    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DSL4Z03NFE"></script>
+    <script src="/analytics.js"></script>
   </body>
 </html>

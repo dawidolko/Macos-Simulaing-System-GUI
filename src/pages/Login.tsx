@@ -35,13 +35,14 @@ export default function Login(props: MacActions) {
       onClick={() => loginHandle()}
     >
       <div className="inline-block w-auto relative top-1/2 -mt-40">
-        <img className="rounded-full size-24 my-0 mx-auto" src={user.avatar} alt="img" />
+        <img className="rounded-full size-24 my-0 mx-auto" src={user.avatar} alt="" />
         <div className="font-semibold mt-2 text-xl text-white">{user.name}</div>
 
         <div className="mx-auto grid grid-cols-5 w-44 h-8 mt-4 rounded-md backdrop-blur-2xl bg-gray-300/50">
           <input
             className="text-sm text-white col-start-1 col-span-4 no-outline bg-transparent px-2"
             type="password"
+            aria-label="Password"
             placeholder="Enter Password"
             onClick={(e) => e.stopPropagation()}
             onKeyDown={keyPress}

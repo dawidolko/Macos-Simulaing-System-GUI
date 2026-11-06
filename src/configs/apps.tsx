@@ -1,6 +1,9 @@
 import { appBarHeight } from "~/utils";
 import type { AppsData } from "~/types";
 
+const Bear = lazy(() => import("~/components/apps/Bear"));
+const Typora = lazy(() => import("~/components/apps/Typora"));
+
 const apps: AppsData[] = [
   {
     id: "launchpad",

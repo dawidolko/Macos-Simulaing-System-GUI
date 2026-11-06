@@ -1,24 +1,14 @@
 {
-  "short_name": "Dawid Olko",
-  "name": "Dawid Olko's Portfolio",
+  "short_name": "macOS Simulator",
+  "name": "macOS Desktop Simulator by Dawid Olko",
   "icons": [
     {
-      "src": "logo/favicon.svg",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo/logo192.png",
+      "src": "/logo/favicon.png",
       "type": "image/png",
       "sizes": "192x192"
-    },
-    {
-      "src": "logo/logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
