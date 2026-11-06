@@ -71,6 +71,16 @@
           max-height: calc(100vh - 180px);
         }
       }
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
     </style>
     <script src="/a11y/a11y-panel.js" data-accent="#0066cc" defer></script>
     <script type="module" crossorigin src="/assets/index-B77XxjUQ.js"></script>
